@@ -1,0 +1,130 @@
+@import '../../styles/settings.scss';
+
+
+.header {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+}
+.slider {
+    height: 100%;
+    width: 100%;
+}
+.header__image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    opacity: 0;
+    object-fit: cover;
+    filter: brightness(0.5);
+    transition: opacity 1s ease-in-out;
+    &.active {
+        opacity: 1;
+    }
+}
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    color: $background-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-in-out; 
+    opacity: 0; 
+
+    &.slide-in {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        
+    }
+   
+    &-title {
+        font-family: $heading-font;
+        font-size: 32px;
+        span {
+            color: $accent-color;
+            margin-right: 20px;
+        }
+    }
+    &-text {
+        text-align: left;
+    }
+    &-buttons {
+        display: flex;
+        gap: 20px; 
+        button {
+            border: 2px solid $accent-color;
+            background-color: transparent;
+            padding: 10px 30px;
+            color: $background-color;
+            border-radius: 20px;
+            font-weight: 700;
+            cursor: pointer;
+            width: 150px;
+            transition: background-color 0.3s ease-in-out;
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
+    }
+
+}
+
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+    color: rgba(255,255,255, 0.5);
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color: $background-color;
+    }
+}
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
+    color: rgba(255,255,255, 0.5);
+    font-size: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+        color: $background-color;
+    }
+}
+.carousel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3%;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    &__dot {
+        height: 3px;
+        width: 30px;
+        background-color: rgba(255,255,255, 0.5);
+        cursor: pointer;
+    }
+}
+.carousel__dot--active {
+    background-color: $background-color;
+}

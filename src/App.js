@@ -1,11 +1,14 @@
+import Header from "./components/Header/Hearder";
+import Nav from "./components/Nav/Nav";
 
 
 
 function App() {
   return (
-    <div className="App">
-     <div>Helo restaurant</div>
-    </div>
+    <>
+      <Nav/>
+      <Header/>
+    </>
   );
 }
 
