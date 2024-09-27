@@ -3,7 +3,25 @@ $default-color: #444444;
 $heading-color: #433f39;
 $accent-color: #ffb03b;
 $surface-color: #42301c;
+$header-color:  #FFF7EA;
 
 $default-font: "Roboto", sans-serif;
 $heading-font: "Satisfy", sans-serif;
 $nav-font: "Poppins", sans-serif;
+
+@mixin button-styles {
+    color: $accent-color;
+    background-color: $header-color;
+    padding: 5px 30px;
+    border-radius: 20px;
+    border: 1px solid $accent-color;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@mixin header-styles {
+        font-size: 32px;
+        font-family: $heading-font;
+        color: $heading-color;
+        font-weight: 500;
+}

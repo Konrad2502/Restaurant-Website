@@ -1,0 +1,104 @@
+@import '../../styles/settings.scss';
+
+.advert {
+    font-size: 40px;
+    background-color: #FFFAF3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 300px;
+    gap: 20px;
+    img {
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+
+.advert__content {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    h3 {
+        font-size: 32px;
+        font-family: $heading-font;
+    }
+    p {
+        font-size: 16px;
+        color: $default-color;
+    }
+}
+.advert__marks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    .mark {
+        display: flex;
+        gap: 10px;
+        .advert-icon {
+            font-size: 16px;
+            color: $accent-color;
+        }
+    }
+}
+
+.advert__image {
+    position: relative;
+}
+
+.play-button {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background-color: $accent-color;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 20px;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+}
+  
+  .play-button:hover {
+    transform: scale(1.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+} /* Powiększenie przycisku */
+  
+  
+  .play-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 5px solid rgba(174, 152, 26, 0.5);
+    animation: pulse 1.5s infinite; /* Efekt pulsowania */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }

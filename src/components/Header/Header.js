@@ -58,7 +58,7 @@ const handleDotClick = (index) => {
           src={slide.image}  
           alt={`Slide ${index}`} 
         />
-        <div key={index} className={`header__content ${index === currentSlide ? 'slide-in' : ''}`}>
+        <div  className={`header__content ${index === currentSlide ? 'slide-in' : ''}`}>
           <div className="header__content-title">
             <h1 dangerouslySetInnerHTML={{ __html: slide.title }}></h1>
           </div>

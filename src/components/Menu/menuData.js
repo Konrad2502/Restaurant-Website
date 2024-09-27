@@ -1,0 +1,77 @@
+const menuData = [
+    {
+        id: '1',
+        title: 'Lobster Bisque',
+        description: 'Lorem, deren, trataro, filede, nerada',
+        image: './assets/images/menu/lobster-bisque.jpg',
+        category: 'starters',
+        price: '5.95',
+    },
+    {
+        id: '2',
+        title: 'Bread Barrel',
+        description: 'Lorem, deren, trataro, filede, nerada',
+        image: './assets/images/menu/bread-barrel.jpg',
+        category: 'specialty',
+        price: '6.95',
+    },
+    {
+        id: '3',
+        title: 'Crab Cake',
+        description: 'A delicate crab cake served on a toasted roll with lettuce and tartar sauce',
+        image: './assets/images/menu/cake.jpg',
+        category: 'starters',
+        price: '7.95',
+    },
+    {
+        id: '4',
+        title: 'Caesar Selections',
+        description: 'Lorem, deren, trataro, filede, nerada',
+        image: './assets/images/menu/caesar.jpg',
+        category: 'salads',
+        price: '8.95',
+    },
+    {
+        id: '5',
+        title: 'Tuscan Grilled',
+        description: 'Grilled chicken with provolone, artichoke hearts, and roasted red pesto',
+        image: './assets/images/menu/tuscan-grilled.jpg',
+        category: 'specialty',
+        price: '9.95',
+    },
+    {
+        id: '6',
+        title: 'Mozzarella Stick',
+        description: 'Lorem, deren, trataro, filede, nerada',
+        image: './assets/images/menu/mozzarella.jpg',
+        category: 'starters',
+        price: '4.95',
+    },
+     {
+        id: '7',
+        title: 'Greek Salad',
+        description: 'Fresh spinach, crisp romaine, tomatoes, and Greek olives',
+        image: './assets/images/menu/greek-salad.jpg',
+        category: 'salads',
+        price: '9.95',
+    },
+    {
+        id: '8',
+        title: 'Spinach Salad',
+        description: 'Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette',
+        image: './assets/images/menu/lobster-bisque.jpg',
+        category: 'salads',
+        price: '9.95',
+    },
+    {
+        id: '9',
+        title: 'Lobster Roll',
+        description: 'Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll',
+        image: './assets/images/menu/lobster-roll.jpg',
+        category: 'specialty',
+        price: '12.95',
+    },
+    
+]
+
+export default menuData;

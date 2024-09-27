@@ -11,7 +11,7 @@ const [isScrolled, setIsScrolled] = useState(true);
 
 useEffect(() => {
     const handleScroll = () => {
-        if(window.scrollY > 10) {
+        if(window.scrollY > 100) {
             setIsScrolled(false)
         } else {
             setIsScrolled(true)
@@ -40,7 +40,7 @@ useEffect(() => {
                 <button>Book a table</button>
             </div>
         </div>
-        <div className='nav__lower'>
+        <div className={`nav__lower ${isScrolled ? 'scrolled' : ''}`}>
             <div className='nav__title'>
                 <h1>Restaurantly</h1>
             </div>
