@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Choice from "./components/Choice/Choice";
 import Nav from "./components/Nav/Nav";
 import Menu from "./components/Menu/Menu";
+import Specials from "./components/Specials/Specials";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Advert/>
       <Choice/>
       <Menu/>
+      <Specials/>
     </>
   );
 }
