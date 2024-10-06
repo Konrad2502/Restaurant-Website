@@ -4,6 +4,9 @@ import Choice from "./components/Choice/Choice";
 import Nav from "./components/Nav/Nav";
 import Menu from "./components/Menu/Menu";
 import Specials from "./components/Specials/Specials";
+import Parties from "./components/Events/Events";
+import Booking from "./components/Booking/Booking";
+import Gallery from "./components/Gallery/Gallery";
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
       <Choice/>
       <Menu/>
       <Specials/>
+      <Parties/>
+      <Booking/>
+      <Gallery/>
     </>
   );
 }

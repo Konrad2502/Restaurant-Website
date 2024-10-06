@@ -24,7 +24,7 @@ export default function Menu() {
                 setMenu(filtered);
             }
             setTransitioning(false);
-        }, 500); // Czas na animację
+        }, 500); 
        
     }
     

@@ -1,0 +1,136 @@
+@import '../../styles/settings.scss';
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px 10px;
+    align-items: center;
+}
+.gallery__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    &-top {
+        @include button-styles;
+    }
+    &-bottom {
+        @include header-styles;
+        span {
+            color: $accent-color;
+        }
+    }
+}
+
+.gallery__pictures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    height: auto;
+}
+.gallery__picture {
+    flex: 1 1 calc(25% - 3px);
+    height: auto;
+    max-width: calc(25% - 3px);
+    cursor: pointer;
+    overflow: hidden;
+    &-item {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        z-index: 1;
+    }
+    &__content {
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: transparent;
+       
+
+        .modal__image {
+            width: 800px;
+            height: 600px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: scaleUp 0.5s ease;
+        }
+
+        .modal__close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            font-size: 3rem;
+            cursor: pointer;
+            z-index: 3;
+            color: $default-color;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                color: $background-color;
+            }
+        }
+
+        .modal__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            font-size: 3rem;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 3;
+            color: $background-color;
+
+            &--left {
+                left: 30px;
+            }
+
+            &--right {
+                right: 30px;
+            }
+        }
+    }
+}
+
+
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
