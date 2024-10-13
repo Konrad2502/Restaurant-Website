@@ -55,7 +55,7 @@ function Events() {
   };
 
   return (
-    <div className='events'>
+    <div id='events' className='events'>
       <div className='events__background'>
         <img src='./assets/images/events-bg.jpg' alt='background-image'></img>
       </div>

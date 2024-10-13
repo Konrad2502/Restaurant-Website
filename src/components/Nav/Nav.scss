@@ -81,6 +81,9 @@
         cursor: pointer;
         transition: color 0.3s ease-in-out;
         font-size: 14px;
+        &.active {
+            color: $accent-color;
+        }
         
       &:hover {
         color: $accent-color;

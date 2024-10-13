@@ -10,21 +10,25 @@
     position: relative;
     background-color: black;
 }
-.container {
-    height: 100vh;
+.header__container {
+    height: 100%;
     width: 100%;
-}
-.header__image {
-    width: 100%;
-    height: 100vh;
     position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
-    object-fit: cover;
-    filter: brightness(0.5);
     transition: opacity 1s ease-in-out;
     &.active {
         opacity: 1;
     }
+}
+.header__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+    transition: opacity 1s ease-in-out;
+   
 }
 .header__content {
     display: flex;

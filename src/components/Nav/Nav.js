@@ -8,6 +8,9 @@ import { faClock} from '@fortawesome/free-solid-svg-icons';
 export default function Nav() {
 
 const [isScrolled, setIsScrolled] = useState(true);
+const [currentLink, setCurrentLink] = useState(0);
+
+const links = ['Home','About','Menu', 'Specials','Events','Chefs','Gallery','Contact']
 
 useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,21 @@ useEffect(() => {
         window.removeEventListener('scroll', handleScroll)
     }
 },[])
+
+const handleClick = (index, sectionId) => {
+    setCurrentLink(index)
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+const scrollToBooking = () => {
+    const menuSection = document.getElementById('booking');
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className='nav'>
         <div className={`nav__upper ${isScrolled ? 'scrolled' : ''}`}>
@@ -37,7 +55,7 @@ useEffect(() => {
                 </div>
             </div>
             <div className='nav__button'>
-                <button>Book a table</button>
+                <button onClick={() => scrollToBooking('booking')}>Book a table</button>
             </div>
         </div>
         <div className={`nav__lower ${isScrolled ? 'scrolled' : ''}`}>
@@ -46,14 +64,9 @@ useEffect(() => {
             </div>
             <div className='nav__list'>
                 <ul className='nav__links'>
-                    <li className='nav__links-link'>Home</li>
-                    <li className='nav__links-link'>About</li>
-                    <li className='nav__links-link'>Menu</li>
-                    <li className='nav__links-link'>Specials</li>
-                    <li className='nav__links-link'>Events</li> 
-                    <li className='nav__links-link'>Chefs</li>
-                    <li className='nav__links-link'>Gallery</li>
-                    <li className='nav__links-link'>Contact</li>              
+                    {links.map((link,index) => (
+                        <li key={index} className={`nav__links-link ${currentLink === index ? 'active' : ''}`} onClick={() => handleClick(index,link.toLowerCase())}>{link}</li>
+                    ))}        
                 </ul>
             </div>
         </div>

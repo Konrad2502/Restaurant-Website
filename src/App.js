@@ -7,6 +7,10 @@ import Specials from "./components/Specials/Specials";
 import Parties from "./components/Events/Events";
 import Booking from "./components/Booking/Booking";
 import Gallery from "./components/Gallery/Gallery";
+import Chefs from "./components/Chefs/Chefs";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
       <Parties/>
       <Booking/>
       <Gallery/>
+      <Chefs/>
+      <Testimonials/>
+      <Contact/>
+      <Footer/>
     </>
   );
 }

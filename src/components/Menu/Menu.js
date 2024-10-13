@@ -29,8 +29,7 @@ export default function Menu() {
     }
     
   return (
-    <div className='menu-container'>
-        <div className='menu'>
+        <div id='menu' className='menu'>
             <div className='menu__header'>
                 <div className='menu__header-top'>MENU</div>
                 <div className='menu__header-bottom'>
@@ -53,7 +52,7 @@ export default function Menu() {
                             <img src={menu.image} alt={`menu ${menu.id}`}></img>
                         </div>
                         <div className='menu__item-description'>
-                            <h5>{menu.title}<span>...........................................................</span></h5>
+                            <h5>{menu.title}</h5>
                             <p>{menu.description}</p>
                         </div>
                         <div className='menu__item-price'>{menu.price}</div>
@@ -62,7 +61,7 @@ export default function Menu() {
                 </div>
             </div>
         </div>
-    </div>
+    
   )
 }
 

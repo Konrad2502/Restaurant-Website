@@ -8,7 +8,8 @@ import {faPlay} from '@fortawesome/free-solid-svg-icons';
 
 function Advert() {
   return (
-    <div className='advert'>
+    <div id='about' className='advert'>
+      <div className="advert__wrapper">
         <div className='advert__image'>
             <img src='./assets/images/about.jpg' alt='advert-image'></img >
             <button className='play-button'><FontAwesomeIcon icon={faPlay} /></button>
@@ -33,6 +34,7 @@ function Advert() {
             <p>
             Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
             </p>
+        </div>
         </div>
     </div>
   )

@@ -25,7 +25,7 @@ function Booking() {
         console.log('Wyslano formularz', formData)
     }
   return (
-    <div className='booking'>
+    <div id='booking' className='booking'>
         <div className='booking__header'>
             <div className='booking__header-top'>BOOK A TABLE</div>
             <div className='booking__header-bottom'>

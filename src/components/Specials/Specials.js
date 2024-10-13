@@ -17,7 +17,7 @@ export default function Specials() {
    }
 
   return (
-    <div className='specials'>
+    <div id='specials' className='specials'>
         <div className='specials__header'>
             <div className='specials__header-top'>SPECIALS</div>
             <div className='specials__header-bottom'>

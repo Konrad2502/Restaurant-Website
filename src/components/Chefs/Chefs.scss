@@ -1,0 +1,81 @@
+@import '../../styles/settings.scss';
+
+.chefs {
+    display: flex;
+    flex-direction: column;
+    width: 1320px;
+    margin: 50px auto;
+    padding: 50px 12px;
+    align-items: center;
+}
+
+.chefs__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    &-top {
+        @include button-styles;
+    }
+    &-bottom {
+        @include header-styles;
+        span {
+            color: $accent-color;
+        }
+    }
+}
+
+.chefs__items {
+    display: flex;
+    gap: 20px;
+}
+.chefs__item {
+    position: relative;
+    overflow: hidden;
+   
+    &-image {
+        max-width: 420px;
+        width: 100%;
+        height: auto;
+    }
+    &-content {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+        position: absolute;
+        top: 100%;
+        left: 0;
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+        h5 {
+            font-size: 18px;
+        }
+        p {
+            font-size: 13px;
+            font-style: italic;
+        }
+    }
+}
+.chefs__socials {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    &-icon {
+        font-size: 20px;
+        transition: color 0.3s ease-in-out;
+        &:hover {
+            color: $accent-color;
+            cursor: pointer;
+        }
+    }
+}
+
+.chefs__item:hover .chefs__item-content {
+    top: 0;
+}

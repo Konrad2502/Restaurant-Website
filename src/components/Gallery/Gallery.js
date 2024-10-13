@@ -68,7 +68,7 @@ function Gallery() {
     
 
   return (
-    <div className='gallery'>
+    <div id='gallery' className='gallery'>
         <div className='gallery__header'>
             <div className='gallery__header-top'>GALLERY</div>
             <div className='gallery__header-bottom'>

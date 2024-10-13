@@ -1,12 +1,12 @@
 @import '../../styles/settings.scss';
 
-.menu-container {
-    width: 100%;
-}
+
 .menu {
     display: flex;
     flex-direction: column;
-    padding: 50px 300px;
+    width: 1340px;
+    margin: 50px auto;
+    padding: 50px 12px;
     align-items: center;
 }
 .menu__header {
@@ -52,17 +52,17 @@
     
 }
 .menu__item {
-    flex: 0 0 45%;
-    // min-width: 400px;
+    flex: 0 0 50%;
+    max-width: 600px;
     display: flex;
     margin-top: 30px;
     gap: 30px;
     opacity: 1;
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transform: scale(1);
+    transition: transform 1s ease-out, opacity 1s ease-in-out;
     &.hidden {
         opacity: 0;
-        transform: translateX(-100%);
+        transform: scale(0);
       }
     
     &-image {
