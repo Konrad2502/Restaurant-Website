@@ -128,3 +128,22 @@
     color: $accent-color !important; 
     font-size: 30px !important;    
   }
+
+
+
+
+ @media (max-width: 1500px) {
+   
+    .slick-prev::before, .slick-next::before {
+        display: none;
+    }
+ }
+
+  @media (max-width: 1340px) {
+    .testimonials__container {
+        width: 100%;
+    }
+    .testimonials__item {
+        max-width: 450px;
+    }
+  }

@@ -34,6 +34,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 40px;
     color: $background-color;
     position: absolute;
@@ -60,7 +61,7 @@
         }
     }
     &-text {
-        text-align: left;
+        text-align: center;
     }
     &-buttons {
         display: flex;
@@ -131,4 +132,43 @@
 }
 .carousel__dot--active {
     background-color: $background-color;
+}
+
+
+
+@media (max-width: 768px) {
+    .header__content {
+        &-title {
+            font-size: 26px;
+        }
+        &-text {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .header__content {
+        max-width: 300px;
+        &-title {
+            font-size: 16px;
+        }
+        &-text {
+            font-size: 12px;
+        }
+        &-buttons {
+            button {
+                width: 100px;
+                padding: 5px 20px;
+            }
+        }
+    }
+    .arrow-left {
+        left: 10px;
+        font-size: 26px;
+    }
+    .arrow-right {
+        right: 10px;
+        font-size: 26px;
+    }
 }

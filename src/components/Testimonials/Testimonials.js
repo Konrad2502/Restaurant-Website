@@ -64,15 +64,32 @@ function Testimonials() {
       } 
 
 
-    const settings = {
+      const settings = {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow:  Math.min(3, testimonials.length),
+        slidesToShow: 3,  
         slidesToScroll: 1,
-        nextArrow: <NextArrow/>,
-        prevArrow: <PrevArrow />
-      };
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1340, 
+                settings: {
+                    slidesToShow: 1,  
+                    slidesToScroll: 1,
+                    
+                }
+            },
+            {
+                breakpoint: 768,  
+                settings: {
+                    slidesToShow: 1, 
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    };
     
   return (
     <div className='testimonials'>

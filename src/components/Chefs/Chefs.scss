@@ -33,6 +33,7 @@
 .chefs__item {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
    
     &-image {
         max-width: 420px;
@@ -78,4 +79,25 @@
 
 .chefs__item:hover .chefs__item-content {
     top: 0;
+}
+
+
+
+@media(max-width: 1340px) {
+    .chefs {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .chefs__items {
+        flex-direction: column;
+    }
+    .chefs__item {
+        width: 100%;
+        &-image {
+            width: 100%;
+            max-width: none;
+        }
+    }
 }

@@ -19,6 +19,7 @@
     }
     &-bottom {
         @include header-styles;
+        text-align: center;
         span {
             color: $accent-color;
         }
@@ -52,7 +53,6 @@
     
 }
 .menu__item {
-    flex: 0 0 50%;
     max-width: 600px;
     display: flex;
     margin-top: 30px;
@@ -93,5 +93,39 @@
         color: $accent-color;
         font-weight: 500;
         margin-left: 50px;
+    }
+}
+
+
+
+@media(max-width: 1340px) {
+    .menu {
+        width: 100%;
+    }
+    .menu__items {
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .menu__item {
+        width: 750px;
+        max-width: 750px;
+       
+        justify-content: space-between;
+        &-price {
+            margin-left: auto;
+            
+        }
+        &-description {
+            width: auto; 
+        }
+        
+    }
+}
+
+@media(max-width: 750px) {
+    .menu__item {
+        max-width: 750px;
+        width: 100%;
     }
 }

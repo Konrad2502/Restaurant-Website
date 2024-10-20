@@ -137,3 +137,17 @@ input,textarea {
         color: #D5D5D5;
     }
 }
+
+
+
+@media (max-width: 1340px) {
+    .contact {
+        width: 100%;
+    }
+    .contact__container {
+        flex-direction: column;
+    }
+    .contact__info {
+        width: 100%;
+    }
+}

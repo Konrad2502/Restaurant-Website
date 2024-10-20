@@ -22,6 +22,7 @@
         font-family: $heading-font;
         color: $heading-color;
         font-weight: 500;
+        text-align: center;
         h3 {
             span {
                 color: $accent-color;
@@ -73,5 +74,20 @@
         font-size: 14px;
         color: #726f6a;
         transition: all 0.4s ease-in-out;
+    }
+}
+
+
+
+@media (max-width: 1340px) {
+    .choice {
+        width: 100%;
+    }
+    .choice__items {
+        flex-direction: column;
+        
+    }
+    .choice__item {
+        max-width: 750px;
     }
 }

@@ -11,7 +11,7 @@ function Advert() {
     <div id='about' className='advert'>
       <div className="advert__wrapper">
         <div className='advert__image'>
-            <img src='./assets/images/about.jpg' alt='advert-image'></img >
+            <img className='advert__image-img' src='./assets/images/about.jpg' alt='advert-image'></img >
             <button className='play-button'><FontAwesomeIcon icon={faPlay} /></button>
         </div>
         <div className='advert__content'>

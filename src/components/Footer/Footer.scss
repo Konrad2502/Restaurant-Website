@@ -82,3 +82,35 @@
         opacity: 1;
     }
 }
+
+
+
+@media (max-width: 1340px){
+    .footer__container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__items {
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+    }
+    .footer__item {
+        width: 45%;
+        justify-content: center;
+        &--socials {
+            align-items: center;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .footer__items {
+        flex-direction: column;
+    }
+    .footer__item {
+        width: 100%;
+    }
+}

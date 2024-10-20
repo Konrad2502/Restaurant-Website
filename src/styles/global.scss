@@ -17,4 +17,11 @@
     font-family: $default-font;
     background-color: $background-color;
     height: 200vh;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 1340px) {
+    body {
+      overflow-x: hidden;
+    }
   }
